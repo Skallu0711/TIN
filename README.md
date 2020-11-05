@@ -1,2 +1,2 @@
 # TIN
-Technologie Internetu
+PJWSTK : Internet Technologies
