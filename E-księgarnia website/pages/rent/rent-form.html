@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Patryk Kamiński">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-księgarnia : Nowe wypożyczenie</title>
+    
+    <link rel="stylesheet" href="../../styles/style.css" />
+</head>
+    
+<body>
+    <header>
+        <h1>E-Księgarnia</h1>
+        <img src="../../images/logo.png" alt="E-Księgarnia Logo">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona główna</a></li>
+            <li><a href="../customers/customers-list.html">Klienci</a></li>
+            <li><a href="../books/books_list.html">Książki</a></li>
+            <li><a href="rent/rent-list.html" class="active">Wypożyczenie</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Nowe wypożyczenie</h2>
+        
+        <form class="form">
+            <div class="form-group">
+                <label for="title">Tytuł:<sup>*</sup></label>
+                <input type="text" name="title" value="Harry Potter : Czara Ognia" id="title" />
+            </div>
+            <div class="form-group">
+                <label for="author">Autor:<sup>*</sup></label>
+                <input type="text" name="author" value="J.K. Rowling" id="author" />
+            </div>
+            <div class="form-group">
+                <label for="publishingCompany">Wydawnictwo:<sup>*</sup></label>
+                <input type="text" name="publishingCompany" value="Media Rodzina" id="publishingCompany" />
+            </div>
+            <div class="form-group">
+                <label for="numberOfCopies">Liczba kopii:<sup>*</sup></label>
+                <input type="number" name="numberOfCopies" value="30" id="numberOfCopies"/>
+            </div>
+            <div class="form-group">
+                <label for="language">Język:<sup>*</sup></label>
+                <input type="text" name="language" value="polski" id="language" />
+            </div>
+            <div class="form-buttons">
+                <input class="form-button-submit" type="submit" value="Dodaj" />
+                <a class="form-button-cancel" href="rent-list.html">Anuluj</a>    
+            </div>
+        </form>
+    </main>
+    
+    <footer>
+        Patryk, Kamiński, s18610
+    </footer>
+</body>
+    
+</html>

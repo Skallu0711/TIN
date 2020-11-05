@@ -1,0 +1,101 @@
+a<!DOCTYPE html>
+<html lang="pl-PL">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Patryk Kamiński">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-księgarnia : Lista wypożyczeń</title>
+    
+    <link rel="stylesheet" href="../../styles/style.css" />
+</head>
+    
+<body>
+    <header>
+        <h1>E-Księgarnia</h1>
+        <img src="../../images/logo.png" alt="E-Księgarnia Logo">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona główna</a></li>
+            <li><a href="../customers/customers-list.html">Klienci</a></li>
+            <li><a href="../books/books_list.html">Książki</a></li>
+            <li><a href="rent/rent-list.html" class="active">Wypożyczenie</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Lista wypożyczeń</h2>
+        
+        <table class="table-list">
+            
+            <thead>
+                <tr>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>Adres</th>
+                    <th>Kod pocztowy</th>
+                    <th>Adres E-mail</th>
+                    <th>Numer telefonu</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr>
+                    <td>Jan</td>
+                    <td>Kowalski</td>
+                    <td>Polna 9</td>
+                    <td>12345</td>
+                    <td>jan.kowalski@gmail.com</td>
+                    <td>511-032-028</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="rent-details.html" class="list-actions-button-details">Szczegóły</a>
+                            </li>
+                            <li>
+                                <a href="rent-form.html" class="list-actions-button-edit">Edytuj</a>
+                            </li>
+                            <li>
+                                <a href="" class="list-actions-button-delete">Usuń</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mateusz</td>
+                    <td>Nowak</td>
+                    <td>Łąkowa 16a</td>
+                    <td>12345</td>
+                    <td>mateusz.nowak@gmail.com</td>
+                    <td>543-696-345</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="rent-details.html" class="list-actions-button-details">Szczegóły</a>
+                            </li>
+                            <li>
+                                <a href="rent-form.html" class="list-actions-button-edit">Edytuj</a>
+                            </li>
+                            <li>
+                                <a href="" class="list-actions-button-delete">Usuń</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+            
+        </table>
+        
+        <p><a href="rent-form.html" class="button-add">Dodaj nowe wypożyczenie</a></p>
+        
+    </main>
+    
+    <footer>
+        Patryk, Kamiński, s18610
+    </footer>
+</body>
+    
+</html>

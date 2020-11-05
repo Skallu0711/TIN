@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+      
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Patryk Kamiński">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-księgarnia : Szczegóły książek</title>
+    
+    <link rel="stylesheet" href="../../styles/style.css" />
+</head>
+    
+<body>
+    <header>
+        <h1>E-Księgarnia</h1>
+        <img src="../../images/logo.png" alt="E-Księgarnia Logo">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona główna</a></li>
+            <li><a href="../customers/customers-list.html">Klienci</a></li>
+            <li><a href="books_list.html" class="active">Książki</a></li>
+            <li><a href="../rent/rent-list.html">Wypożyczenie</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Szczegóły książek</h2>
+        
+        <form>
+            <div>
+                <label for="title">Tytuł:<sup>*</sup></label>
+                <input type="text" name="title" value="Harry Potter : Czara Ognia" id="title" disabled />
+            </div>
+            <div>
+                <label for="author">Autor:<sup>*</sup></label>
+                <input type="text" name="author" value="J.K. Rowling" id="author" disabled />
+            </div>
+            <div>
+                <label for="publishingCompany">Wydawnictwo:<sup>*</sup></label>
+                <input type="text" name="publishingCompany" value="Media Rodzina" id="publishingCompany" disabled />
+            </div>
+            <div>
+                <label for="numberOfCopies">Liczba kopii:<sup>*</sup></label>
+                <input type="number" name="numberOfCopies" value="30" id="numberOfCopies" disabled />
+            </div>
+            <div class="form-group">
+                <label for="language">Język:<sup>*</sup></label>
+                <input type="text" name="language" value="polski" id="language" disabled />
+            </div>
+            <div>
+                <p><a href="rent-form.html">Edytuj</a></p>
+            </div>
+        </form>
+        
+        <h2>Szczegóły wypożyczeń</h2>
+        
+        <table class="table-list">
+            <thead>
+                <tr>
+                    <th>Tytuł</th>
+                    <th>Adres wysyłki</th>
+                    <th>Data wypożyczenia</th>
+                    <th>Data zwrotu</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr>
+                    <td>Harry Potter: The Philosophers Stone</td>
+                    <td>Polna 9</td>
+                    <td>15.10.2020</td>
+                    <td>30.10.2020</td>
+                </tr>
+                <tr>
+                    <td>Harry Potter: The Chamber of Secrets</td>
+                    <td>Łąkowa 16a</td>
+                    <td>01.11.2020</td>
+                    <td>04.11.2020</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div>
+            <p><a href="books_list.html">Powrót</a></p>    
+        </div>
+        
+    </main>
+    
+    <footer>
+        Patryk, Kamiński, s18610
+    </footer>
+</body>
+    
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+      
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Patryk Kamiński">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-księgarnia : Szczegóły klienta</title>
+    
+    <link rel="stylesheet" href="../../styles/style.css" />
+</head>
+    
+<body>
+    <header>
+        <h1>E-Księgarnia</h1>
+        <img src="../../images/logo.png" alt="E-Księgarnia Logo">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="customers-list.html" class="active">Klienci</a></li>
+            <li><a href="books_list.html">Książki</a></li>
+            <li><a href="">Wypożyczenie</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Szczegóły klienta</h2>
+        
+        <form>
+            <div>
+                <label for="name">Imię:<sup>*</sup></label>
+                <input type="text" name="name" value="Jan" id="name" disabled />
+            </div>
+            <div>
+                <label for="surname">Nazwisko:<sup>*</sup></label>
+                <input type="text" name="surname" value="Kowalski" id="surname" disabled />
+            </div>
+            <div>
+                <label for="address">Adres:<sup>*</sup></label>
+                <input type="text" name="address" value="Polna 6" id="address" disabled />
+            </div>
+            <div>
+                <label for="zipCode">Kod pocztowy:<sup>*</sup></label>
+                <input type="number" name="zipCode" id="zipCode" value="12345" min="0" max="9" step="2" disabled />
+            </div>
+            <div>
+                <label for="phoneNumber">Numer telefonu:<sup>*</sup></label>
+                <input type="tel" name="phoneNumber" value="123-456-789" id="phoneNumber" disabled />
+            </div>
+            <div>
+                <p><a href="customers-form.html">Edytuj</a></p>
+            </div>
+        </form>
+        
+        <h2>Szczegóły wypożyczeń</h2>
+        
+        <table class="table-list">
+            <thead>
+                <tr>
+                    <th>Tytuł</th>
+                    <th>Adres wysyłki</th>
+                    <th>Data wypożyczenia</th>
+                    <th>Data zwrotu</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr>
+                    <td>Harry Potter: The Philosophers Stone</td>
+                    <td>Polna 9</td>
+                    <td>15.10.2020</td>
+                    <td>30.10.2020</td>
+                </tr>
+                <tr>
+                    <td>Harry Potter: The Chamber of Secrets</td>
+                    <td>Łąkowa 16a</td>
+                    <td>01.11.2020</td>
+                    <td>04.11.2020</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div>
+            <p><a href="customers-list.html">Powrót</a></p>    
+        </div>
+        
+    </main>
+    
+    <footer>
+        Patryk, Kamiński, s18610
+    </footer>
+</body>
+    
+</html>
