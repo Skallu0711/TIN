@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Patryk Kamiński">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>E-księgarnia : Szczegóły książek</title>
     
     <link rel="stylesheet" href="../../styles/style.css" />
@@ -21,36 +21,31 @@
             <li><a href="../index.html">Strona główna</a></li>
             <li><a href="../customers/customers-list.html">Klienci</a></li>
             <li><a href="books_list.html" class="active">Książki</a></li>
-            <li><a href="../rent/rent-list.html">Wypożyczenie</a></li>
+            <li><a href="../rent/rent-list.html">Wypożyczenia</a></li>
         </ul>
     </nav>
     
     <main>
         <h2>Szczegóły książek</h2>
         
-        <form>
+        <form class="form">
+            <label for="title">Tytuł:</label>
+            <input type="text" name="title" value="Harry Potter: The Philosophers Stone" id="title" disabled />
+            
+            <label for="author">Autor:</label>
+            <input type="text" name="author" value="J.K. Rowling" id="author" disabled />
+            
+            <label for="publishing_company">Wydawnictwo:</label>
+            <input type="text" name="publishing_company" value="Media Rodzina" id="publishing_company" disabled />
+          
+            <label for="number_of_copies">Liczba kopii:</label>
+            <input type="number" name="number_of_copies" value="30" id="number_of_copies" disabled />
+            
+            <label for="language">Język:</label>
+            <input type="text" name="language" value="polski" id="language" disabled />
+            
             <div>
-                <label for="title">Tytuł:<sup>*</sup></label>
-                <input type="text" name="title" value="Harry Potter : Czara Ognia" id="title" disabled />
-            </div>
-            <div>
-                <label for="author">Autor:<sup>*</sup></label>
-                <input type="text" name="author" value="J.K. Rowling" id="author" disabled />
-            </div>
-            <div>
-                <label for="publishingCompany">Wydawnictwo:<sup>*</sup></label>
-                <input type="text" name="publishingCompany" value="Media Rodzina" id="publishingCompany" disabled />
-            </div>
-            <div>
-                <label for="numberOfCopies">Liczba kopii:<sup>*</sup></label>
-                <input type="number" name="numberOfCopies" value="30" id="numberOfCopies" disabled />
-            </div>
-            <div class="form-group">
-                <label for="language">Język:<sup>*</sup></label>
-                <input type="text" name="language" value="polski" id="language" disabled />
-            </div>
-            <div>
-                <p><a href="rent-form.html">Edytuj</a></p>
+                <p><a class="list-actions-button-edit" href="rent-form.html">Edytuj</a></p>
             </div>
         </form>
         
@@ -83,7 +78,7 @@
         </table>
         
         <div>
-            <p><a href="books_list.html">Powrót</a></p>    
+            <p><a class="list-actions-button-details" href="books_list.html">Powrót</a></p>    
         </div>
         
     </main>

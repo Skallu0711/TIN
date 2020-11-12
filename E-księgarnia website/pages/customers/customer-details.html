@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Patryk Kamiński">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>E-księgarnia : Szczegóły klienta</title>
     
     <link rel="stylesheet" href="../../styles/style.css" />
@@ -18,39 +18,37 @@
     
     <nav>
         <ul>
-            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="../index.html">Strona główna</a></li>
             <li><a href="customers-list.html" class="active">Klienci</a></li>
-            <li><a href="books_list.html">Książki</a></li>
-            <li><a href="">Wypożyczenie</a></li>
+            <li><a href="../books/books_list.html">Książki</a></li>
+            <li><a href="../rent/rent-list.html">Wypożyczenia</a></li>
         </ul>
     </nav>
     
     <main>
         <h2>Szczegóły klienta</h2>
         
-        <form>
+        <form class="form">
+            <label for="name">Imię:</label>
+            <input type="text" name="name" value="Jan" id="name" disabled />
+            
+            <label for="surname">Nazwisko:</label>
+            <input type="text" name="surname" value="Kowalski" id="surname" disabled />
+            
+            <label for="address">Adres:</label>
+            <input type="text" name="address" value="Polna 6" id="address" disabled />
+            
+            <label for="zip_code">Kod pocztowy:</label>
+            <input type="number" name="zipCzip_codeode" id="zip_code" value="12345" min="0" max="9" step="2" disabled />
+            
+            <label for="email">Adres e-mail:</label>
+            <input type="text" name="email" value="example@domain.com" id="email" disabled/>
+            
+            <label for="phone_number">Numer telefonu:</label>
+            <input type="text" name="phone_number" value="123-456-789" id="phone_number" disabled />
+            
             <div>
-                <label for="name">Imię:<sup>*</sup></label>
-                <input type="text" name="name" value="Jan" id="name" disabled />
-            </div>
-            <div>
-                <label for="surname">Nazwisko:<sup>*</sup></label>
-                <input type="text" name="surname" value="Kowalski" id="surname" disabled />
-            </div>
-            <div>
-                <label for="address">Adres:<sup>*</sup></label>
-                <input type="text" name="address" value="Polna 6" id="address" disabled />
-            </div>
-            <div>
-                <label for="zipCode">Kod pocztowy:<sup>*</sup></label>
-                <input type="number" name="zipCode" id="zipCode" value="12345" min="0" max="9" step="2" disabled />
-            </div>
-            <div>
-                <label for="phoneNumber">Numer telefonu:<sup>*</sup></label>
-                <input type="tel" name="phoneNumber" value="123-456-789" id="phoneNumber" disabled />
-            </div>
-            <div>
-                <p><a href="customers-form.html">Edytuj</a></p>
+                <p><a class="list-actions-button-edit" href="customers-form.html">Edytuj</a></p>
             </div>
         </form>
         
@@ -83,7 +81,7 @@
         </table>
         
         <div>
-            <p><a href="customers-list.html">Powrót</a></p>    
+            <p><a class="list-actions-button-details" href="customers-list.html">Powrót</a></p>    
         </div>
         
     </main>

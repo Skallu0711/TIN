@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Patryk Kamiński">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>E-księgarnia : Nowe wypożyczenie</title>
     
     <link rel="stylesheet" href="../../styles/style.css" />
@@ -21,7 +21,7 @@
             <li><a href="../index.html">Strona główna</a></li>
             <li><a href="../customers/customers-list.html">Klienci</a></li>
             <li><a href="../books/books_list.html">Książki</a></li>
-            <li><a href="rent/rent-list.html" class="active">Wypożyczenie</a></li>
+            <li><a href="rent-list.html" class="active">Wypożyczenia</a></li>
         </ul>
     </nav>
     
@@ -29,26 +29,21 @@
         <h2>Nowe wypożyczenie</h2>
         
         <form class="form">
-            <div class="form-group">
-                <label for="title">Tytuł:<sup>*</sup></label>
-                <input type="text" name="title" value="Harry Potter : Czara Ognia" id="title" />
-            </div>
-            <div class="form-group">
-                <label for="author">Autor:<sup>*</sup></label>
-                <input type="text" name="author" value="J.K. Rowling" id="author" />
-            </div>
-            <div class="form-group">
-                <label for="publishingCompany">Wydawnictwo:<sup>*</sup></label>
-                <input type="text" name="publishingCompany" value="Media Rodzina" id="publishingCompany" />
-            </div>
-            <div class="form-group">
-                <label for="numberOfCopies">Liczba kopii:<sup>*</sup></label>
-                <input type="number" name="numberOfCopies" value="30" id="numberOfCopies"/>
-            </div>
-            <div class="form-group">
-                <label for="language">Język:<sup>*</sup></label>
-                <input type="text" name="language" value="polski" id="language" />
-            </div>
+            <label for="customer">Klient:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="customer" value="Jan Kowalski" id="customer" />
+            
+            <label for="book">Książka:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="book" value="Harry Potter : Czara Ognia" id="book" />
+            
+            <label for="deliver_address">Adres dostawy:</label>
+            <input type="text" name="deliver_address" value="Polna 9" id="deliver_address" />
+            
+            <label for="rent_date">Data wypożyczenia:</label>
+            <input type="date" name="rent_date" value="mm/dd/yyyy" id="rent_date"/>
+            
+            <label for="return_date">Data zwrotu:</label>
+            <input type="date" name="return_date" value="mm/dd/yyyy" id="return_date" />
+            
             <div class="form-buttons">
                 <input class="form-button-submit" type="submit" value="Dodaj" />
                 <a class="form-button-cancel" href="rent-list.html">Anuluj</a>    
