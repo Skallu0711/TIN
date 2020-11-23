@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Patryk Kamiński">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>E-księgarnia : Nowy klient</title>
+    <title>E-księgarnia : Edycja klienta</title>
     
     <link rel="stylesheet" href="../../styles/style.css" />
 </head>
@@ -20,13 +20,13 @@
         <ul>
             <li><a href="../index.html">Strona główna</a></li>
             <li><a href="customers-list.html" class="active">Klienci</a></li>
-            <li><a href="../books/books_list.html">Książki</a></li>
+            <li><a href="../books/books-list.html">Książki</a></li>
             <li><a href="../rent/rent-list.html">Wypożyczenia</a></li>
         </ul>
     </nav>
     
     <main>
-        <h2>Nowy klient</h2>
+        <h2>Edycja klienta</h2>
         
         <form class="form">
             <label for="name">Imię:<abbr title="required" aria-label="required">*</abbr></label>
@@ -39,7 +39,7 @@
             <input type="text" name="address" value="Polna 6" id="address" />
             
             <label for="zip_code">Kod pocztowy:</label>
-            <input type="number" name="zip_code" id="zip_code" value="12345" />
+            <input type="text" name="zip_code" id="zip_code" value="12-345" />
             
             <label for="email">Adres e-mail:</label>
             <input type="text" name="email" value="examle@domain.com" id="email" />
@@ -55,7 +55,7 @@
     </main>
     
     <footer>
-        Patryk, Kamiński, s18610
+        Patryk Kamiński - s18610
     </footer>
 </body>
     

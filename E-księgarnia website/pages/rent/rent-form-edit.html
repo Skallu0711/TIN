@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="author" content="Patryk Kamiński">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>E-księgarnia : Nowe wypożyczenie</title>
+    <title>E-księgarnia : Edycja wypożyczenia</title>
     
     <link rel="stylesheet" href="../../styles/style.css" />
 </head>
@@ -20,29 +20,37 @@
         <ul>
             <li><a href="../index.html">Strona główna</a></li>
             <li><a href="../customers/customers-list.html">Klienci</a></li>
-            <li><a href="../books/books_list.html">Książki</a></li>
+            <li><a href="../books/books-list.html">Książki</a></li>
             <li><a href="rent-list.html" class="active">Wypożyczenia</a></li>
         </ul>
     </nav>
     
     <main>
-        <h2>Nowe wypożyczenie</h2>
+        <h2>Edycja wypożyczenia</h2>
         
-        <form class="form">
+        <form id="rent_edit_form" class="form">
             <label for="customer">Klient:<abbr title="required" aria-label="required">*</abbr></label>
-            <input type="text" name="customer" value="Jan Kowalski" id="customer" />
+            <select name="customers" id="customer" form="rent_edit_form">
+                <option value="Jan Kowalski">Jan Kowalski</option>
+                <option value="Mateusz Nowak">Mateusz Nowak</option>
+            </select>
+            <!-- <input type="text" name="customer" value="Jan Kowalski" id="customer" /> -->
             
             <label for="book">Książka:<abbr title="required" aria-label="required">*</abbr></label>
-            <input type="text" name="book" value="Harry Potter : Czara Ognia" id="book" />
+            <select name="books" id="book" form="rent_edit_form">
+                 <option value="Harry Potter: The Philosophers Stone">Harry Potter: The Philosophers Stone</option>
+                <option value="Harry Potter: The Chamber of Secrets">Harry Potter: The Chamber of Secrets</option>
+            </select>
+            <!-- <input type="text" name="book" value="Harry Potter : Czara Ognia" id="book" /> -->
             
             <label for="deliver_address">Adres dostawy:</label>
             <input type="text" name="deliver_address" value="Polna 9" id="deliver_address" />
             
             <label for="rent_date">Data wypożyczenia:</label>
-            <input type="date" name="rent_date" value="mm/dd/yyyy" id="rent_date"/>
+            <input type="date" name="rent_date" value="2020-11-05" id="rent_date"/>
             
             <label for="return_date">Data zwrotu:</label>
-            <input type="date" name="return_date" value="mm/dd/yyyy" id="return_date" />
+            <input type="date" name="return_date" value="2020-11-20" id="return_date" />
             
             <div class="form-buttons">
                 <input class="form-button-submit" type="submit" value="Dodaj" />
@@ -52,7 +60,7 @@
     </main>
     
     <footer>
-        Patryk, Kamiński, s18610
+        Patryk Kamiński - s18610
     </footer>
 </body>
     
