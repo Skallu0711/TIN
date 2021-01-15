@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Patryk Kamiński">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>E-księgarnia : Nowy klient</title>
+    
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <script type="application/javascript" src="../../js/validationCustomerForm.js"></script>
+</head>
+    
+<body>
+    <header>
+        <h1>E-Księgarnia</h1>
+        <img src="../../images/logo.png" alt="E-Księgarnia Logo">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona główna</a></li>
+            <li><a href="customers-list.html" class="active">Klienci</a></li>
+            <li><a href="../books/books-list.html">Książki</a></li>
+            <li><a href="../rent/rent-list.html">Wypożyczenia</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Nowy klient</h2>
+        
+        <form class="form" novalidate onsubmit="return validateForm();">
+            <label for="name">Imię:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="name" id="name" placeholder="np: Jan"/>
+            <span id="errorName" class="errors-text"></span>
+            
+            <label for="surname">Nazwisko:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="surname" id="surname" placeholder="np: Kowalski"/>
+            <span id="errorSurname" class="errors-text"></span>
+            
+            <label for="address">Adres:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="address" id="address" placeholder="np: Polna 9"/>
+            <span id="errorAddress" class="errors-text"></span>
+            
+            <label for="zip_code">Kod pocztowy:</label>
+            <input type="text" name="zip_code" id="zip_code" placeholder="np: 12-345"/>
+            <span id="errorZipCode" class="errors-text"></span>
+            
+            <label for="email">Adres e-mail:</label>
+            <input type="text" name="email" id="email" placeholder="np: example@domain.com"/>
+            <span id="errorEmail" class="errors-text"></span>
+           
+            <label for="phone_number">Numer telefonu:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="phone_number" id="phone_number" placeholder="np: 123-456-789"/>
+            <span id="errorPhoneNumber" class="errors-text"></span>
+            
+            <span id="errorsSummary" class="errors-text"></span>
+            
+            <div class="form-buttons">
+                <input class="form-button-submit" type="submit" value="Dodaj" />
+                <a class="form-button-cancel" href="customers-list.html">Anuluj</a>    
+            </div>
+        </form>
+    </main>
+    
+    <footer>
+        Patryk Kamiński - s18610
+    </footer>
+</body>
+    
+</html>

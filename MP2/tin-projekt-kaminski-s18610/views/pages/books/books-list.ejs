@@ -1,0 +1,44 @@
+<%- include('../../fragments/header.ejs') %>
+
+    <main>
+        <h2>Lista Książek</h2>
+        
+        <table class="table-list">
+            
+            <thead>
+                <tr>
+                    <th>Tytuł</th>
+                    <th>Autor</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+    
+            <tbody> 
+            <% for (let book of books) { %>
+                <tr>
+                    <td><%= book.title %></td>
+                    <td><%= book.author %></td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="/books/details/<%=book._id%>" class="list-actions-button-details">Szczegóły</a>
+                            </li>
+                            <li>
+                                <a href="/books/edit/<%=book._id%>" class="list-actions-button-edit">Edytuj</a>
+                            </li>
+                            <li>
+                                <a href="/books/delete/<%=book._id%>" class="list-actions-button-delete">Usuń</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            <% } %>
+            </tbody>
+            
+        </table>
+        
+        <p><a href="/books/add" class="button-add">Dodaj nową książkę</a></p>
+        
+    </main>
+    
+<%- include('../../fragments/footer.ejs') %>

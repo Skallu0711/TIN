@@ -1,0 +1,103 @@
+<%- include('../../fragments/header.ejs') %>
+    
+    <main>
+        <script type="application/javascript" src="/js/validationBooksForm.js"></script>
+        <h2><%= pageTitle%></h2>
+        
+        <form class="form" method="post" action="<%=formAction%>" novalidate > <!-- onsubmit="return validateFormBooks();" -->
+            
+            <input type="hidden" name="_id" value="<%= book._id %>">
+            
+            <label for="title">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="title" id="title" placeholder="np: Harry Potter: The Philosophers Stone" value="<%= book.title %>" 
+                   class="<%= validationErrors.find(e=>e.path.includes('title')) ? 'error-input' : '' %>" <%=(formMode=='showDetails' ) ? 'disabled' : '' %>/>
+            <span id="errorTitle" class="errors-text">
+                <% if (validationErrors.find(e=> e.path.includes('title'))) { %>
+                    <%= validationErrors.find(e=> e.path.includes('title')).message %>
+                <% } %>
+            </span>
+            
+            <label for="author">Autor:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="author" id="author" placeholder="np: J.K. Rowling" value="<%= book.author %>" 
+                   class="<%= validationErrors.find(e=>e.path.includes('author')) ? 'error-input' : '' %>" <%=(formMode=='showDetails' ) ? 'disabled' : '' %>/>
+            <span id="errorAuthor" class="errors-text">
+                <% if (validationErrors.find(e=> e.path.includes('author'))) { %>
+                    <%= validationErrors.find(e=> e.path.includes('author')).message %>
+                <% } %>
+            </span>
+            
+            <label for="publishing_company">Wydawnictwo:</label>
+            <input type="text" name="publishing_company" id="publishing_company" placeholder="np: Media Rodzina" value="<%= book.publishing_company %>"
+                class="<%= validationErrors.find(e=>e.path.includes('publishing_company')) ? 'error-input' : '' %>" <%=(formMode=='showDetails' ) ? 'disabled' : '' %>/>
+            <span id="errorPublishingCompany" class="errors-text">
+                <% if (validationErrors.find(e=> e.path.includes('publishing_company'))) { %>
+                    <%= validationErrors.find(e=> e.path.includes('publishing_company')).message %>
+                <% } %>
+            </span>
+           
+            <label for="number_of_copies">Liczba kopii:</label>
+            <input type="number" name="number_of_copies" id="number_of_copies" placeholder="np: 30" value="<%= book.number_of_copies %>"
+                   class="<%= validationErrors.find(e=>e.path.includes('number_of_copies')) ? 'error-input' : '' %>" <%=(formMode=='showDetails' ) ? 'disabled' : '' %>/>
+            <span id="errorNumberOfCopies" class="errors-text">
+                <% if (validationErrors.find(e=> e.path.includes('number_of_copies'))) { %>
+                    <%= validationErrors.find(e=> e.path.includes('number_of_copies')).message %>
+                <% } %>
+            </span>
+            
+            <label for="language">Język:</label>
+            <input type="text" name="language" id="language" placeholder="np: polski" value="<%= book.language %>" 
+                   class="<%= validationErrors.find(e=>e.path.includes('language')) ? 'error-input' : '' %>" <%=(formMode=='showDetails' ) ? 'disabled' : '' %>/>
+            <span id="errorLanguage" class="errors-text">
+                <% if (validationErrors.find(e=> e.path.includes('language'))) { %>
+                    <%= validationErrors.find(e=> e.path.includes('language')).message %>
+                <% } %>
+            </span>
+            
+            <% if (formMode == 'showDetails') { %>
+                <div>
+                    <a class="list-actions-button-edit" href="/books/edit/<%= book._id %>">Edytuj</a>
+                </div>
+            <% } %>
+            
+            <div>
+                <p id="errorsSummary" class="errors-text"></p>
+
+                <% if (formMode != 'showDetails') { %>
+                    <input class="form-button-submit" type="submit" value="<%=btnLabel%>" />
+                    <a class="form-button-cancel" href="/books">Anuluj</a>
+                <% } else { %>
+                    <a class="form-button-cancel" href="/books">Powrót</a>
+                <% } %>
+            </div>
+            
+        </form>
+        
+        <% if (formMode == 'showDetails' || formMode == 'edit') { %>
+        <h2>Szczegóły wypożyczeń</h2>
+        
+        <table class="table-list">
+            <thead>
+                <tr>
+                    <th>Klient</th>
+                    <th>Adres wysyłki</th>
+                    <th>Data wypożyczenia</th>
+                    <th>Data zwrotu</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <% for (let b of book.rents) { %>
+                    <tr>
+                        <td><a href="/customers/customers-details/<%= b.customer._id %>"><%= b.customer.name %></a></td>
+                        <td><%= b.delivery_address %></td>
+                        <td><%= b.rent_date.toISOString().split('T')[0] %></td>
+                        <td><%= b.return_date ? b.return_date.toISOString().split('T')[0] : '' %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+        <% } %>
+        
+    </main>
+    
+<%- include('../../fragments/footer.ejs') %>

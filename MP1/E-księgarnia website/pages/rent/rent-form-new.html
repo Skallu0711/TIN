@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Patryk Kamiński">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>E-księgarnia : Nowe wypożyczenie</title>
+    
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <script type="application/javascript" src="../../js/validationRentForm.js"></script>>
+</head>
+    
+<body>
+    <header>
+        <h1>E-Księgarnia</h1>
+        <img src="../../images/logo.png" alt="E-Księgarnia Logo">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona główna</a></li>
+            <li><a href="../customers/customers-list.html">Klienci</a></li>
+            <li><a href="../books/books-list.html">Książki</a></li>
+            <li><a href="rent-list.html" class="active">Wypożyczenia</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Nowe wypożyczenie</h2>
+        
+        <form id="rent_form" class="form" novalidate onsubmit="return validateForm();">
+            <label for="customer">Klient:<abbr title="required" aria-label="required">*</abbr></label>
+            <select name="customers" id="customer" form="rent_form">
+                <option selected="selected">---Wybierz klienta---</option>  <!-- default value -->
+                <option value="Jan Kowalski">Jan Kowalski</option>
+                <option value="Mateusz Nowak">Mateusz Nowak</option>
+            </select>
+            <span id="errorCustomer" class="errors-text"></span>
+            <!-- <input type="text" name="customer" id="customer" placeholder="Jan Kowalski"/> -->
+            
+            <label for="book">Książka:<abbr title="required" aria-label="required">*</abbr></label>
+            <select name="books" id="book" form="rent_form">
+                <option selected="selected">---Wybierz ksiazke---</option> <!-- default value -->
+                <option value="Harry Potter: The Philosophers Stone">Harry Potter: The Philosophers Stone</option>
+                <option value="Harry Potter: The Chamber of Secrets">Harry Potter: The Chamber of Secrets</option>
+            </select>
+            <span id="errorBook" class="errors-text"></span>
+            <!-- <input type="text" name="book" id="book" /> -->
+            
+            <label for="delivery_address">Adres dostawy:</label>
+            <input type="text" name="delivery_address" id="delivery_address" placeholder="np: Polna 9"/>
+            <span id="errorDeliveryAddress" class="errors-text"></span>
+            
+            <label for="rent_date">Data wypożyczenia:</label>
+            <input type="date" name="rent_date" id="rent_date" />
+            <span id="errorRentDate" class="errors-text"></span>
+            
+            <label for="return_date">Data zwrotu:</label>
+            <input type="date" name="return_date" id="return_date" />
+            <span id="errorReturnDate" class="errors-text"></span>
+                
+            <span id="errorsSummary" class="errors-text"></span>
+            
+            <div class="form-buttons">
+                <input class="form-button-submit" type="submit" value="Dodaj" />
+                <a class="form-button-cancel" href="rent-list.html">Anuluj</a>    
+            </div>
+        </form>
+    </main>
+    
+    <footer>
+        Patryk Kamiński - s18610
+    </footer>
+</body>
+    
+</html>

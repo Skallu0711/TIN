@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Patryk Kamiński">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>E-księgarnia : Nowa książka</title>
+    
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <script type="application/javascript" src="../../js/validationBooksForm.js"></script>
+</head>
+    
+<body>
+    <header>
+        <h1>E-Księgarnia</h1>
+        <img src="../../images/logo.png" alt="E-Księgarnia Logo">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="../index.html">Strona główna</a></li>
+            <li><a href="../customers/customers-list.html">Klienci</a></li>
+            <li><a href="books-list.html" class="active">Książki</a></li>
+            <li><a href="../rent/rent-list.html">Wypożyczenia</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h2>Nowa książka</h2>
+        
+        <form class="form" novalidate onsubmit="return validateForm();">
+            <label for="title">Tytuł:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="title" id="title" placeholder="np: Harry Potter: The Philosophers Stone"/>
+            <span id="errorTitle" class="errors-text"></span>
+            
+            <label for="author">Autor:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="author" id="author" placeholder="np: J.K. Rowling"/>
+            <span id="errorAuthor" class="errors-text"></span>
+            
+            <label for="publishing_company">Wydawnictwo:</label>
+            <input type="text" name="publishing_company" id="publishing_company" placeholder="np: Media Rodzina"/>
+            <span id="errorPublishingCompany" class="errors-text"></span>
+           
+            <label for="number_of_copies">Liczba kopii:</label>
+            <input type="number" name="number_of_copies" id="number_of_copies" placeholder="np: 30"/>
+            <span id="errorNumberOfCopies" class="errors-text"></span>
+            
+            <label for="language">Język:</label>
+            <input type="text" name="language" id="language" placeholder="np: polski"/>
+            <span id="errorLanguage" class="errors-text"></span>
+            
+            <span id="errorsSummary" class="errors-text"></span>
+            
+            <div class="form-buttons">
+                <input class="form-button-submit" type="submit" value="Dodaj" />
+                <a class="form-button-cancel" href="books-list.html">Anuluj</a>    
+            </div>
+        </form>
+    </main>
+    
+    <footer>
+        Patryk Kamiński - s18610
+    </footer>
+</body>
+    
+</html>

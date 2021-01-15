@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Patryk Kamiński">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>E-Księgarnia</title>
+    
+    <link rel="stylesheet" href="/styles/style.css" />
+    
+</head>
+    
+<body>
+    <header>
+        <h1>E-Księgarnia</h1>
+        <img src="/images/logo.png" alt="E-Księgarnia Logo">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/" class="<%= navLocation == 'main' ? 'active' : ''%>">Strona główna</a></li>
+            <li><a href="/customers" class="<%= navLocation == 'customers' ? 'active' : ''%>">Klienci</a></li>
+            <li><a href="/books" class="<%= navLocation == 'books' ? 'active' : ''%>">Książki</a></li>
+            <li><a href="/rent" class="<%= navLocation == 'rent' ? 'active' : ''%>">Wypożyczenia</a></li>
+        </ul>
+    </nav>

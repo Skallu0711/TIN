@@ -1,0 +1,44 @@
+<%- include('../../fragments/header.ejs') %>
+    
+    <main>
+        <h2>Lista Wypożyczeń</h2>
+        
+        <table class="table-list">
+            
+            <thead>
+                <tr>
+                    <th>Klient</th>
+                    <th>Książka</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+            <% for (let rent of rents) { %>
+                <tr>
+                    <td><%= rent.customer.name%></td>
+                    <td><%= rent.book.title %></td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="/rent/details/<%=rent._id%>" class="list-actions-button-details">Szczegóły</a>
+                            </li>
+                            <li>
+                                <a href="/rent/edit/<%=rent._id%>" class="list-actions-button-edit">Edytuj</a>
+                            </li>
+                            <li>
+                                <a href="/rent/delete/<%=rent._id%>" class="list-actions-button-delete">Usuń</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            <% } %>
+            </tbody>
+            
+        </table>
+        
+        <p><a href="/rent/add" class="button-add">Dodaj nowe wypożyczenie</a></p>
+        
+    </main>
+    
+<%- include('../../fragments/footer.ejs') %>
